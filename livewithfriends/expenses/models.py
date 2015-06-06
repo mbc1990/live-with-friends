@@ -24,16 +24,16 @@ class Store(models.Model):
 class House(models.Model):
     
     # Users who live in the house
-    members = models.ManyToManyField(User)
+    members = models.ManyToManyField(User, null=True)
     
     # Name
     name = models.CharField(max_length=200)
     
     # Address
-    address = models.ForeignKey(Address)
+    address = models.ForeignKey(Address, null=True)
 
     # Notes
-    notes = models.CharField(max_length=200)
+    notes = models.CharField(max_length=200, null=True)
 
 class Expense(models.Model):
     
