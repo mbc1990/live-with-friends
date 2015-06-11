@@ -3,5 +3,5 @@ from django.contrib import admin
 from views import HouseView
 
 urlpatterns = [
-    url(r'^house/', HouseView.as_view(), name='house'),
+    url(r'^house/(?P<pk>\d+)/$', HouseView.as_view(), name='house'),
 ]
